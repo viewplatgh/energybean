@@ -53,6 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="feedback2013\" />
+    <Folder Include="templates\" />
     <Folder Include="widgets\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Python Tools\Microsoft.PythonTools.Django.targets" />

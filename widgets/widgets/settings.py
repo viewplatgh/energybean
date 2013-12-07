@@ -24,8 +24,15 @@ DEBUG = True
 
 TEMPLATE_DEBUG = True
 
+ADMINS = (
+    ('energybean.leo', 'energybean.leo@gmail.com'),
+)
+
+MANAGERS = ADMINS
+
 ALLOWED_HOSTS = []
 
+TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
 
 # Application definition
 
@@ -36,6 +43,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'feedback2013',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -67,7 +75,7 @@ DATABASES = {
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Australia/Melbourne'
 
 USE_I18N = True
 
