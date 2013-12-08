@@ -1,10 +1,21 @@
-﻿<html>
-<head><title>能量豆培训2013学生反馈</title></head>
+﻿{% load staticfiles %}
+<html>
+<head>
+    <title>能量豆培训2013学生反馈</title>
+    <script src="{% static 'feedback2013/jquery-1.10.2.min.js' %}"/>
+    <script>
+        $("document").ready(function (){
+            $("#close_window").click(function() {
+                window.close();
+            });  
+        });
+    </script>
+</head>
 
 <body>
 
 <p>感谢您参与本次调查！</p>
-<input name="close_window" value="关闭窗口" type="button" onclick="javascript: window.close();"/>
-
+<input id="close_window" name="close_window" value="关闭窗口" type="button"/>
+<img src="{% static 'feedback2013/111.jpg' %}"/>
 </body>
 </html>
