@@ -1,0 +1,26 @@
+﻿<html>
+<head><title>能量豆培训2013学生反馈</title></head>
+
+<body>
+    <form action="{% url 'feedback2013:feedback2'%}" method="post">
+        {% csrf_token %}        
+        <div>
+            <label for="id_final_atar_score">最终ATAR成绩:</label>
+            <input id="id_final_atar_score" name="final_atar_score" step="any" type="number" />        
+        </div>
+        <div>
+            <label for="id_uni_and_major">录取大学(校区)与专业:</label>
+            <input id="id_uni_and_major" maxlength="255" name="uni_and_major" type="text" />
+        </div>
+        <div>
+            <label for="id_comment">意见建议:</label>
+            <input id="id_comment" maxlength="560" name="comment" type="text" />
+        </div>
+        <div>
+            <p>欢迎介绍朋友同学前来2013疯狂辅导。我们提供免费VCE咨询：从华人学生独特角度，全盤打造一套最合適最高效的VCE高分方案、學習計劃，全面衝刺！</p>
+        </div>
+        <input type="submit" value="下一步"/>
+    </form>
+
+</body>
+</html>

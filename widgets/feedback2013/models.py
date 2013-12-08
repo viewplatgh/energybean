@@ -37,6 +37,7 @@ class Feedback(models.Model):
         return 'Feedback 2013'
     student = models.ForeignKey(Student)
     comment = models.CharField(max_length=560)
+    created_date = models.DateTimeField('date created')
 
 
 

@@ -1,0 +1,41 @@
+﻿<html>
+<head><title>能量豆培训2013学生反馈</title></head>
+
+<body>
+
+    <form action="{% url 'feedback2013:feedback1'%}" method="post">
+        {% csrf_token %}
+
+        <div>
+            <label>中文姓名：</label>
+            <input id="id_chinese_name" maxlength="50" name="chinese_name" type="text"/>
+        </div>
+        <div>
+            <label>英文姓名：</label>
+            <input id="id_english_name" maxlength="50" name="english_name" type="text"/>
+        </div>
+        <div>
+            <label>就读高中：</label>
+            <input id="id_high_school" maxlength="255" name="high_school" type="text"/>
+        </div>
+        <div>
+            <label>Email:</label>
+            <input id="id_email" maxlength="75" name="email" type="email" />
+        </div>
+        <div>
+            <label>来澳前(中国)所读学校：</label>
+            <input id="id_school_in_china" maxlength="255" name="school_in_china" type="text" />
+        </div>
+        <div>
+            <label for="id_education_in_china">来澳前(中国)所学最高年级:</label>                        
+            <input id="id_education_in_china" maxlength="50" name="education_in_china" type="text" />
+        </div>
+        <div>
+            <label for="id_year_study_in_au">来澳年份:</label>
+            <input id="id_year_study_in_au" name="year_study_in_au" type="text" />
+        </div>
+        <input type="submit" value="下一步"/>
+    </form>
+
+</body>
+</html>
