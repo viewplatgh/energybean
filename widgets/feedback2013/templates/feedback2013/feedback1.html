@@ -1,5 +1,10 @@
-﻿<html>
-<head><title>能量豆培训2013学生反馈</title></head>
+﻿{% load staticfiles %}
+<html>
+<head>
+    <title>能量豆培训2013学生反馈</title>
+    <link type="text/css" href="{% static 'feedback2013/style.css' %}"/>
+    <script src="{% static 'feedback2013/jquery-1.10.2.min.js' %}"></script>
+</head>
 
 <body>
     <form action="{% url 'feedback2013:feedback2'%}" method="post">
@@ -16,6 +21,36 @@
             <label for="id_comment">意见建议:</label>
             <input id="id_comment" maxlength="560" name="comment" type="text" />
         </div>
+        <div>
+        <table>
+            <tr>
+                <td>Unit3/4科目 (Subject) 仅填写所选科目 </td>
+                <td>原始分 (Study Score)</td>
+                <td>加减分后 (Scaled)</td>
+                <td>是否为2012年所学，或为2011提前已考？(选项Y/N)</td>
+                <td>备注 Remarks 可在此自由添加情况说明</td>
+            </tr>
+            {% for sub in subject.all %}
+            <tr>
+                <td>
+                    <label>{{ sub.name }}</label>
+                    <input type="hidden" id="id_subject_name" name="subject_name" value="{{ sub.name }}"></input>
+                </td>
+                <td>
+                    <input id="id_study_score" name="study_score" step="any" type="number"></input>
+                </td>
+                <td>
+                    <input id="id_scaled_score" name="scaled_score" step="any" type="number"></input>
+                </td>
+                <td>
+                    <input id="id_for_2012_2011" name="for_2012_2011" type="checkbox" />
+                </td>
+                <td>
+                    <input id="id_remark" length="200" maxlength="255" name="remark" type="text" />
+                </td>
+            </tr>
+            {% endfor%}
+        </table>
         <div>
             <p>欢迎介绍朋友同学前来2013疯狂辅导。我们提供免费VCE咨询：从华人学生独特角度，全盤打造一套最合適最高效的VCE高分方案、學習計劃，全面衝刺！</p>
         </div>
