@@ -36,6 +36,8 @@
     <Compile Include="feedback2013\views.py" />
     <Compile Include="feedback2013\__init__.py" />
     <Compile Include="manage.py" />
+    <Compile Include="utils\EBUtils.py" />
+    <Compile Include="utils\__init__.py" />
     <Compile Include="widgets\views.py" />
     <Compile Include="widgets\__init__.py" />
     <Compile Include="widgets\settings.py" />
@@ -61,6 +63,7 @@
     <Folder Include="feedback2013\static\feedback2013\" />
     <Folder Include="feedback2013\templates\" />
     <Folder Include="feedback2013\templates\feedback2013\" />
+    <Folder Include="utils\" />
     <Folder Include="static\" />
     <Folder Include="templates\" />
     <Folder Include="templates\admin\" />

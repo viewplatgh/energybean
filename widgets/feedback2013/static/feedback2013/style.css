@@ -7,3 +7,14 @@ form > div
 {
     margin: 10px;
 }
+
+td > div 
+{
+    margin: auto;
+    text-align: center;
+}
+
+div.center
+{
+    text-align: center;
+}
