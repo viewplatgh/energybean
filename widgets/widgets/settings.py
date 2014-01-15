@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = 'zieq+b-=+yf78ovj0!cw!&zf)rv$_pfxg-3i(93+cq_ds*)t@)'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True 
+DEBUG = False 
 
 TEMPLATE_DEBUG = True
 
@@ -30,8 +30,8 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
-#ALLOWED_HOSTS = ['energybean.pythonanywhere.com']
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['energybean.pythonanywhere.com']
+#ALLOWED_HOSTS = ['*']
 
 TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
 
