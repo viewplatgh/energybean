@@ -28,6 +28,11 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="ebadmin\admin.py" />
+    <Compile Include="ebadmin\models.py" />
+    <Compile Include="ebadmin\tests.py" />
+    <Compile Include="ebadmin\views.py" />
+    <Compile Include="ebadmin\__init__.py" />
     <Compile Include="feedback2013\admin.py" />
     <Compile Include="feedback2013\initdb.py" />
     <Compile Include="feedback2013\models.py" />
@@ -57,6 +62,8 @@
     </WebPiReference>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="ebadmin\" />
+    <Folder Include="ebadmin\templates\" />
     <Folder Include="feedback2013\" />
     <Folder Include="feedback2013\sql\" />
     <Folder Include="feedback2013\static\" />
@@ -70,6 +77,7 @@
     <Folder Include="widgets\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ebadmin\templates\index.html" />
     <Content Include="feedback2013\sql\Subject.sql" />
     <Content Include="feedback2013\static\feedback2013\jquery-1.10.2.min.js" />
     <Content Include="feedback2013\static\feedback2013\style.css" />
@@ -77,6 +85,9 @@
     <Content Include="feedback2013\templates\feedback2013\feedback1.html" />
     <Content Include="feedback2013\templates\feedback2013\feedback2.html" />
     <Content Include="templates\admin\base_site.html" />
+    <Content Include="templates\admin\index.html">
+      <SubType>Content</SubType>
+    </Content>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Python Tools\Microsoft.PythonTools.Django.targets" />
   <ProjectExtensions>
