@@ -49,7 +49,7 @@ def feedback2(request):
                       subject=subject,
                       study_score=study_score,
                       scaled_score=scaled_score,
-                      for_2012_2011 = True if request.POST['for_2012_2011_%s' % item] == 'on' else False,
+                      for_2012_2011 = True if request.POST['for_2012_2011_%s' % item] == 'yes' else False,
                       remark=request.POST['remark_%s' % item])
         score.save()
 
